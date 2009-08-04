@@ -1,6 +1,6 @@
 LowPro = {};
-LowPro.Version = '0.5';
-LowPro.CompatibleWithPrototype = '1.6';
+LowPro.Version = '<%= LOW_PRO_VERSION %>';
+LowPro.CompatibleWithPrototype = '<%= LOW_PRO_COMPATIBLE_WITH_PROTOTYPE_VERSION %>';
 
 if (Prototype.Version.indexOf(LowPro.CompatibleWithPrototype) != 0 && window.console && window.console.warn)
   console.warn("This version of Low Pro is tested with Prototype " + LowPro.CompatibleWithPrototype + 

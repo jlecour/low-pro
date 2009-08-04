@@ -8,3 +8,8 @@ if (Prototype.Version.indexOf(LowPro.CompatibleWithPrototype) != 0 && window.con
 
 if (!Element.addMethods) 
   Element.addMethods = function(o) { Object.extend(Element.Methods, o) };
+
+//= require "dom"
+//= require "domready"
+//= require "behavior"
+//= require "core_behaviors"

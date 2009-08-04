@@ -1,10 +1,10 @@
 Low Pro - Unobtrusive Scripting Extensions to Prototype
 -------------------------------------------------------
 
-Version: 0.5
+Version: 0.5.1
 Author: Dan Webb (dan@danwebb.net)
 Project Home: http://www.danwebb.net/lowpro/
-Subversion: http://svn.danwebb.net/external/lowpro/
+Git: http://github.com/danwrong/low-pro
 Licence: MIT
 
 Low Pro is a small JavaScript library built as an extension to Prototype that makes unobtrusive DOM scripting much easier.  Here's a rundown of the functionality:
@@ -16,6 +16,14 @@ Low Pro is a small JavaScript library built as an extension to Prototype that ma
 
 Compatible with Prototype 1.6
 Tested in: Firefox 1.5 (PC/Mac), Safari 2, IE 6+, Opera 9 (PC/Mac)
+
+
+Low Pro is compatible with Sprockets (http://getsprockets.org/)
+To include in a sprockets package juse add this in your main JS file :
+  //= require <lowpro>
+To include an optional behavior (eg: date_selector.js):
+  //= require <lowpro_behaviors/date_selector>
+
 
 Please mail any feedback to dan@danwebb.net
 

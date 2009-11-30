@@ -111,10 +111,12 @@ Event.addBehavior = function(rules) {
 
 Event.delegate = function(rules) {
   return function(e) {
-      var element = $(e.element());
-      for (var selector in rules)
-        if (element.match(selector)) return rules[selector].apply(this, $A(arguments));
-    }
+		for ( var selector in rules ){
+			if ( e.findElement(selector) ) {
+				return rules[selector].apply(this, $A(arguments));
+			}
+		}        
+	}
 }
 
 Object.extend(Event.addBehavior, {
@@ -304,7 +306,7 @@ Remote.Form = Behavior.create(Remote.Base, {
     var sourceElement = e.element();
     
     if (['input', 'button'].include(sourceElement.nodeName.toLowerCase()) && 
-        sourceElement.type == 'submit')
+        ['submit', 'image'].include(sourceElement.type))
       this._submitButton = sourceElement;
   },
   onsubmit : function() {
